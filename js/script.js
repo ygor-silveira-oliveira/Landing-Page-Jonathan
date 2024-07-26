@@ -7,13 +7,13 @@ var form = document.querySelector('#my_form');
 var footer = document.querySelector('#footer');
 
 btn.addEventListener('click', () => {
-form.style.display = 'block';
-footer.style.height = '600px';
+    form.style.display = 'block';
+    footer.style.height = '200vh';
 });
 
 close.addEventListener('click', () => {
     form.style.display = 'none';
-    footer.style.height = '240px';
+    footer.style.height = '140vh';
 });
 
 //CAROUSEL

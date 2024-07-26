@@ -21,7 +21,6 @@ html{
     scroll-padding-top: 99px;
 }
 body{
-
     background-color: white;
     overflow-x: hidden;
 }
@@ -330,7 +329,7 @@ body{
 
 .teaching{
     background-color: var(--blue);
-    height: 548vh;
+    height: 540vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -382,7 +381,7 @@ body{
 
 .galeria-principal{
     width: 80%;
-    margin: 2rem auto;
+    margin: 0.5rem auto;
 }
 .galeria{
     display: grid;
@@ -627,7 +626,10 @@ form input{
     border: none;
     padding: 5px;
     font-family: var(--text);
-    border: 2px solid var(--orange);
+    /*border: 2px solid var(--orange);*/
+    background-color: var(--blue);
+    color: white;
+
 }
 form textarea{
     width: 400px;
@@ -635,7 +637,15 @@ form textarea{
     padding: 5px;
     border-radius: 5px;
     font-family: var(--text);
-    border: 2px solid var(--orange);
+    border: none;
+    background-color: var(--blue);
+    color: white;
+}
+form input::placeholder{
+    color: var(--orange);
+}
+form textarea::placeholder{
+    color: var(--orange);
 }
 form button{
     width: 400px;
@@ -688,7 +698,7 @@ form button{
         width: 45vw;
     }
     .home{
-        height: 175.7vh;
+        height: 192.8vh;
         width: 100vw;
         flex-direction: column;
     }
@@ -712,7 +722,7 @@ form button{
         font-size: 17px;
     }
     .research{
-        height: 1780vh;
+        height: 1950vh;
     }
     .interest-container{
         margin-left: 30px;
@@ -736,11 +746,17 @@ form button{
         margin-right: 130px;
     }
     .teaching{
-        height: 1200vh;
+        height: 1590vh;
     }
-    
+    .galeria-principal{
+        width: 60%;
+    }
+    .galeria{
+        display: flex;
+        flex-direction: column;
+    }
     .community{
-        height: 480vh;
+        height: 500vh;
     }
     .community-itens{
         flex-direction: column-reverse;
@@ -855,7 +871,7 @@ form button{
             width: 45vw;
         }
         .home{
-            height: 139.5vh;
+            height: 153vh;
             flex-direction: column;
             width: 100vw;
             
@@ -881,7 +897,7 @@ form button{
             font-size: 17px;
         }
         .research{
-            height: 1290vh;
+            height: 1410vh;
         }
         .interest-container{
             margin-left: 30px;
@@ -901,10 +917,10 @@ form button{
             margin-right: 450px;
         }
         .teaching{
-            height: 730vh;
+            height: 800vh;
         }
         .community{
-            height: 430vh;
+            height: 480vh;
         }
         .community-itens{
             flex-direction: column-reverse;
@@ -1027,7 +1043,7 @@ form button{
             width: 600px;
         }
         footer{
-            height: 53vh;
+            height: 53dvh;
         }
         #icons a i{
             font-size: 50px;
