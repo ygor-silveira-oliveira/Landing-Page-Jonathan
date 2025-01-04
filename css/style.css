@@ -4,11 +4,13 @@
 
 :root{
     --blue: #002855;
-    --orange: #FF5F05;
+    --whiteGray: rgb(231, 204, 204);
+    --aqua: rgb(91, 158, 158);
     --darkBlue: #0F2040;
     --text: "Sarala", sans-serif;
     --title: "Righteous",  sans-serif;
     --component: "JetBrains Mono", sans-serif;
+    /*#FF5F05*/
 }
 *{
     margin: 0;
@@ -49,7 +51,7 @@ body{
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background: var(--orange);
+    background: var(--whiteGray);
     margin: 8px;
     transition: 0.3s;
 }
@@ -74,7 +76,7 @@ body{
 }
 .list-bar:hover{
     letter-spacing: 2px;
-    color: var(--orange);
+    color: var(--aqua);
 }
 .list-bar:active{
     letter-spacing: 0.5px;
@@ -123,15 +125,15 @@ body{
 .opening p{
     font-size: 17px;
     font-family: var(--text);
-    line-height: 33px;
+    line-height: 30px;
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.76);
 }
 .txt-color{
-    color: var(--orange);
+    color: rgb(91, 158, 158);
     font-weight: bold;
 }
 .btn{
-    background-image: linear-gradient(to right, var(--blue), var(--orange));
+    background-image: linear-gradient(to right, var(--blue), var(--whiteGray));
     height: 50px;
     width: 180px;
     font-family: "Righteous",  sans-serif;
@@ -171,17 +173,18 @@ body{
 .title{
     text-align: center;
     padding-top: 10px;
-    color: var(--orange);
+    color: var(--aqua);
     font-family: var(--title);
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.384);
 }
 .subtitle{
     padding-top: 10px;
-    color: var(--orange);
+    color: var(--whiteGray);
     font-family: var(--title);
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.384);
     margin-left: 20px;
     margin-top: 70px;
+    letter-spacing: 2px;
 }
 
 .interest-container{
@@ -206,7 +209,7 @@ body{
 .interest-container div ul li:before{
     content: '\2022';
     margin: 0 2px;
-  color: var(--orange) /* cor da bolinha */
+  color: var(--aqua) /* cor da bolinha */
 }
 .interest-container div ul li{
     color: white;
@@ -273,10 +276,10 @@ body{
     margin: 20px 10px 0 30px;
     counter-increment: li;
     padding: 5px;
-    border-bottom: 2px solid var(--orange);
+    border-bottom: 2px solid var(--aqua);
 }
 .conferences ol li::before{
-    content: counter(li); color: var(--orange);
+    content: counter(li); color: var(--aqua);
     display: inline-block; width: 1em;
     margin-left: -1.5em;
     margin-right: 0.5em; 
@@ -329,7 +332,7 @@ body{
 
 .teaching{
     background-color: var(--blue);
-    height: 540vh;
+    height: 1080vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,14 +372,14 @@ body{
     margin: 5px;
 }
 .curso h4{
-    color: var(--orange);
+    color: var(--aqua);
     font-family: var(--text);
     text-align: center;
 }
 .curso-title{
     text-align: center;
     font-family: var(--component);
-    color: var(--orange);
+    color: var(--whiteGray);
 }
 
 .galeria-principal{
@@ -436,19 +439,87 @@ body{
     height: 85vh;
     margin-top: 50px;
 }
+.opinions-opening{
+    color: #fff;
+    font-family: var(--text);
+    text-align: center;
+    width: 98%;
+}
+.opinions-flex{
+    width: 100vw;
+    padding-left: 18px;
+    
+}
+.opinions h5{
+    color: var(--aqua);
+    text-align: center;
+    font-family: var(--title);
+    font-weight: bold;
+}
 .opn{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 70px;
+    padding: 20px;
+    background-color: var(--darkBlue);
+    width: 97vw;
+}
+.opn-card{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 1000px;
+    height: 350px;
+}
+.opn-card p, h4{
+    color: var(--aqua);
+    font-family: var(--component);
+}
+.hr-1{
+    height: 100px;
+    
+}
+.hr-2{
+    height: 200px;
+}
+#opn-num{  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 950px;
+    color: #fff;
+    font-family: var(--text);
+    font-size: 0.8rem;
+}
+#opn-students{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #fff;
+    font-family: var(--text);
+    font-size: 0.8rem;
+}
+#opn-students strong{
+    color: var(--aqua);
 }
 .opn-name{
     font-family: var(--component);
-    color: var(--orange);
+    color: var(--aqua);
     text-align: left;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.342);
 }
+#fall-2022{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#fall-2022 h4{
+    font-size: 0.8rem;
+}
+/*
 .txt-opn{
     color: rgba(255, 255, 255, 0.555);
     font-family: var(--text);
@@ -456,7 +527,7 @@ body{
     font-size: 0.9em;
     text-align: left;
 }
-
+*/
 
 
 
@@ -496,7 +567,7 @@ body{
     height: 100%;
     width: 100%;
     border-radius: 8px;
-    border: 5px inset var(--orange);
+    border: 5px inset var(--aqua);
 }
 .community-itens{
     display: flex;
@@ -541,13 +612,13 @@ body{
 }
 .community-labels-right h4{
     padding-top: 10px;
-    color: var(--orange);
+    color: var(--whiteGray);
     font-family: var(--title);
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.384);
 }
 .community-labels-left h4{
     padding-top: 10px;
-    color: var(--orange);
+    color: var(--whiteGray);
     font-family: var(--title);
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.384);
 }
@@ -557,19 +628,120 @@ body{
 
 .more{
     background: var(--blue);
-    height: 200vh;
+    height: 360vh;
     padding-top: 50px;
 }
 .more-sub{
     padding-top: 10px;
-    color: var(--orange);
+    color: var(--whiteGray);
     font-family: var(--title);
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.384);
     margin-right: 1000px;
     margin-top: 70px;
 }
+.honnors-container, .fellowships-container, .experiences-container{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.honnors-container ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.honnors-container ul li, .fellowships-container div ul li, .memberships-container div ul li, .experiences-container div p{
+    color: white;
+    font-family: var(--text);
+    text-shadow: 2px 3px 5px black;
+}
+.honnors-container ul li::before{
+    content: '\2014';
+    margin: 0 5px;
+    color: var(--aqua)
+}
+.fellowships-container{
+    height: 60vh;
+}
+.fellowships-container div, .memberships-container div{
+    background: linear-gradient(to right, var(--darkBlue), var(--blue));
+    border-radius: 8px;
+    height: 85%;
+    width: 80%;
+    padding: 20px;
+}
+.fellowships-container div ul, .memberships-container div ul{
+    display: flex;
+    align-items: start;
+    list-style: none;
+    flex-direction: column;
+    gap: 25px;
+}
+.fellowships-container div ul li::before{
+    content: '\2022';
+    margin: 0 2px;
+    color: var(--aqua)
+}
+.memberships-container{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.memberships-container div{
+    background: linear-gradient(to left, var(--darkBlue), var(--blue));
+}
+.memberships-container div ul{
+    align-items: end;
+}
+.memberships-container div ul li::before{
+    content: '\2022';
+    margin: 0 2px;
+    color: var(--aqua)
+}
 
+.experiences-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+    height: 90vh;
+}
+#experience-flex{
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+.experiences-container div{
+    margin: 10px;
+}
+.experiences-container div p::before{
+    content: '\2014';
+    margin: 0 5px;
+    color: var(--aqua)
+}
+.carrossel-copaAmerica {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    height: 400px; 
+    
+    overflow: hidden;
+    border: 2px solid var(--aqua);
+    border-radius: 10px;
+    margin: 300px;
+}
 
+.carrossel-copaAmerica img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+    transition: opacity 1s ease-in-out;
+}
 
 
 
@@ -594,7 +766,7 @@ footer p{
 }
 #icons a i{
     font-size: 35px;
-    color: var(--orange);
+    color: var(--whiteGray);
     margin: 30px 50px;
 }
 #icons a:hover{
@@ -604,7 +776,7 @@ footer p{
 #icons a i:active{
     transform: translateY(5px);
     transition: 0.4s;
-    color: rgb(202, 188, 188);
+    color: #fff;
 }
 
 
@@ -626,7 +798,7 @@ form input{
     border: none;
     padding: 5px;
     font-family: var(--text);
-    /*border: 2px solid var(--orange);*/
+    /*border: 2px solid var(--whiteGray);*/
     background-color: var(--blue);
     color: white;
 
@@ -642,15 +814,15 @@ form textarea{
     color: white;
 }
 form input::placeholder{
-    color: var(--orange);
+    color: var(--whiteGray);
 }
 form textarea::placeholder{
-    color: var(--orange);
+    color: var(--whiteGray);
 }
 form button{
     width: 400px;
     height: 30px;
-    background-color: var(--orange);
+    background-color: var(--whiteGray);
     color: var(--blue);
     border: none;
     border-radius: 5px;
@@ -660,7 +832,7 @@ form button{
 }
 #close{
     font-size: 0.9em;
-    color: var(--orange);
+    color: var(--whiteGray);
     font-family: var(--component);
     cursor: pointer;
     margin-left: 475px;
@@ -703,7 +875,7 @@ form button{
         flex-direction: column;
     }
     .home figure img{
-        height: 400px;
+        height: 387px;
     }
     .opening{
         margin: 0;
@@ -722,7 +894,7 @@ form button{
         font-size: 17px;
     }
     .research{
-        height: 1950vh;
+        height: 1850vh;
     }
     .interest-container{
         margin-left: 30px;
@@ -746,8 +918,38 @@ form button{
         margin-right: 130px;
     }
     .teaching{
-        height: 1590vh;
+        height: 2290vh;
     }
+    .opn{
+        gap: 270px;
+        padding: 20px;
+        width: 92vw;
+        height: 900vh;
+    }
+    .opn-card{
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+        height: 350px;
+        margin-bottom: 60px;
+    }
+    #opn-card-marginB{
+        margin-bottom: 150px;
+    }
+    #opn-num{  
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .hr-1{
+        height: 5px;
+        width: 150px;
+    }
+    .hr-2{
+        height: 5px;
+        width: 400px;
+    }
+    
     .galeria-principal{
         width: 60%;
     }
@@ -765,8 +967,8 @@ form button{
         margin-bottom: 50px;
     }
     .figure1{
-        width: 320px;
-        height: 300px;
+        width: 300px;
+        height: 310px;
         
     }
     .figure2{
@@ -804,6 +1006,38 @@ form button{
     .direction-left p{
         font-size: 1.1rem;
         text-align: center;
+    }
+    .more{
+        height: 480vh;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .honnors-container, .fellowships-container, .experiences-container{
+        width:90vw;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .honnors-container ul{
+        margin-left: 20px;
+    }
+    .fellowships-container{
+        height: 100vh;
+    }
+    .fellowships-container div, .memberships-container div{
+        height: 90%;
+        width: 90%;
+    }
+    .memberships-container div{
+        height: 450px;
+    }
+    .experiences-container{
+        height: 91vh;
+    }
+    .carrossel-copaAmerica {
+        height: 40vh; 
     }
     footer{
         height: 153vh;
@@ -871,7 +1105,7 @@ form button{
             width: 45vw;
         }
         .home{
-            height: 153vh;
+            height: 148vh;
             flex-direction: column;
             width: 100vw;
             
@@ -897,7 +1131,7 @@ form button{
             font-size: 17px;
         }
         .research{
-            height: 1410vh;
+            height: 1300vh;
         }
         .interest-container{
             margin-left: 30px;
@@ -917,10 +1151,23 @@ form button{
             margin-right: 450px;
         }
         .teaching{
-            height: 800vh;
+            height: 1470vh;
+        }
+        .opn{
+            gap: 215px;
+            padding: 20px;
+            width: 95vw;
+            height: 900vh;
+        }
+        .opn-card{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            width: 1000px;
+            height: 350px;
         }
         .community{
-            height: 480vh;
+            height: 450vh;
         }
         .community-itens{
             flex-direction: column-reverse;
@@ -969,6 +1216,41 @@ form button{
             font-size: 1.2rem;
             text-align: center;
         }
+
+        .more{
+            height: 450vh;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .honnors-container, .fellowships-container, .experiences-container{
+            width:95vw;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .honnors-container ul{
+            margin-left: 20px;
+        }
+        .fellowships-container{
+            height: 100vh;
+        }
+        .fellowships-container div, .memberships-container div{
+            height: 65%;
+            width: 90%;
+        }
+        .memberships-container div{
+            height: 350px;
+        }
+        .experiences-container{
+            height: 97vh;
+        }
+        .carrossel-copaAmerica {
+            height: 60vh; 
+        }
+
+
         footer{
             height: 60vh;
         }
@@ -1014,7 +1296,19 @@ form button{
             width: 60vw;
         }
         .teaching{
-            height: 625vh;
+            height: 1090vh;
+        }
+        .opn{
+            width: 96.3vw;
+        }
+        .opn-card{
+            gap: 25px;
+            width: 1000px;
+            height: 350px;
+            padding-right: 50px;
+        }
+        #opn-num{  
+            width: 2050px;
         }
         .marginLeft{
             margin-right: 680px;
@@ -1042,6 +1336,10 @@ form button{
             height: 300px;
             width: 600px;
         }
+        .fellowships-container div{
+            height: 95%;
+            margin-top: 20px;
+        }
         footer{
             height: 53dvh;
         }
@@ -1049,7 +1347,32 @@ form button{
             font-size: 50px;
         }
     }
-
+    @media (min-width: 1440px){
+        .home{
+            height: 84vh;
+        }
+        .home figure img{
+            height: 637px;
+        }
+        .research{
+            height: 700vh;
+        }
+        .teaching{
+            height: 900vh;
+        }
+        .community{
+            height: 250vh;
+        }
+        .more{
+            height: 350vh;
+        }
+        .memberships-container div{
+            height: 70%
+        }
+        .fellowships-container div{
+            height: 60%;
+        }
+    }
 
 
 

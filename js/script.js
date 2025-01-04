@@ -151,3 +151,26 @@ const mobileNavbar = new MobileNavbar(
 ".list li",
 );
 mobileNavbar.init();
+
+
+//CAROUSEL COPA AMERICA
+let index = 0;
+const images = document.querySelectorAll('#carrossel-copaAmerica img');
+
+function mostrarImagem(i) {
+    images.forEach((img, idx) => {
+        img.style.display = (idx === i) ? 'block' : 'none';
+        
+    });
+}
+
+function proximo() {
+    index = (index + 1) % images.length;
+    mostrarImagem(index);
+}
+
+// Exibe a primeira imagem
+mostrarImagem(index);
+
+// Muda a imagem a cada 3 segundos
+setInterval(proximo, 3000);
